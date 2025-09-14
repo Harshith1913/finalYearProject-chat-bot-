@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MedCare Hospital - Leading healthcare provider offering comprehensive medical services, experienced doctors, and state-of-the-art facilities.">
+    <meta name="keywords" content="hospital, healthcare, medical services, doctors, appointments, emergency care">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="MedCare Hospital - Your Health, Our Priority">
+    <meta property="og:description" content="Leading healthcare provider with comprehensive medical services and experienced doctors.">
+    <meta property="og:image" content="https://yoursite.com/images/og-image.jpg">
+    <meta property="og:url" content="https://yoursite.com">
+    
+    <link rel="canonical" href="https://yoursite.com">
+    <title>Latest News & Updates - MedCare Hospital</title>
+    <link rel="icon" type="image/x-icon" href="images/MEDCARE_logo.png">
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="js/main.js" as="script">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Hospital",
+        "name": "MedCare Hospital",
+        "description": "Leading healthcare provider with comprehensive medical services",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Healthcare Ave",
+            "addressLocality": "Medical City",
+            "postalCode": "12345",
+            "addressCountry": "US"
+        },
+        "telephone": "+1-234-567-8900"
+    }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar container">
+            <!-- Sidebar Toggle Button -->
+            <button class="sidebar-toggle" aria-label="Open Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="logo-container">
+                <img src="images/MEDCARE_logo.png" alt="MedCare Logo">
+            </div>
+            
+            <div class="nav-links">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="doctors.html" class="nav-link">Our Doctors</a></li>
+                    <li><a href="appointments.html" class="nav-link">Appointments</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="emergency.html" class="nav-link">Emergency</a></li>
+                </ul>
+            </div>
+
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <span class="hamburger"></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <img src="images/MEDCARE_logo.png" alt="MedCare Logo">
+            </div>
+            <button class="close-sidebar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="index.html" class="sidebar-active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="services.html"><i class="fas fa-stethoscope"></i> Services</a></li>
+                <li><a href="doctors.html"><i class="fas fa-user-md"></i> Our Doctors</a></li>
+                <li><a href="appointments.html"><i class="fas fa-calendar-check"></i>Appointments</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="emergency.html"><i class="fas fa-ambulance"></i> Emergency</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay"></div>
+
+    <section class="about-hero">
+        <div class="container">
+            <div class="about-hero-content">
+                <h1>Latest News & Updates</h1>
+                <p>Discover the latest medical breakthroughs and hospital updates</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="news-section" id="news">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Stay Informed</span>
+                <h2>Read our Articles</h2>
+            </div>
+
+            <!-- News Categories Navigation -->
+            <div class="news-categories">
+                <button class="category-btn active" data-category="all">
+                    <i class="fas fa-th-large"></i> All Updates
+                </button>
+                <button class="category-btn" data-category="medical">
+                    <i class="fas fa-stethoscope"></i> Medical
+                </button>
+                <button class="category-btn" data-category="research">
+                    <i class="fas fa-microscope"></i> Research
+                </button>
+                <button class="category-btn" data-category="technology">
+                    <i class="fas fa-laptop-medical"></i> Technology
+                </button>
+                <button class="category-btn" data-category="wellness">
+                    <i class="fas fa-heart"></i> Wellness
+                </button>
+            </div>
+
+            <!-- Medical News Section -->
+            <div class="news-category-section" data-category="medical">
+                <div class="section-header-mini">
+                    <h3>Medical News & Updates</h3>
+                    <p>Latest medical breakthroughs and treatment updates</p>
+                </div>
+                
+                <div class="news-grid">
+                    <!-- Featured Medical Article -->
+                    <article class="news-card featured">
+                        <div class="card-image">
+                            <img src="images/cancer-treatment.jpg" alt="Advanced Cancer Treatment">
+                            <div class="card-overlay">
+                                <span class="card-tag featured">Featured</span>
+                                <span class="card-tag medical">Medical</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="date"><i class="far fa-calendar-alt"></i> March 20, 2024</span>
+                                <span class="author"><i class="far fa-user"></i> Dr. Sarah Johnson</span>
+                                <span class="read-time"><i class="far fa-clock"></i> 5 min read</span>
+                            </div>
+                            <h4>Revolutionary Immunotherapy Treatment Shows 90% Success Rate</h4>
+                            <p>Our oncology department has achieved a breakthrough in cancer treatment using a novel immunotherapy approach. The new protocol combines targeted therapy with immune system enhancement, showing remarkable results in early-stage trials...</p>
+                            <div class="article-highlights">
+                                <span>90% Success Rate</span>
+                                <span>Minimal Side Effects</span>
+                                <span>Faster Recovery</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                                <div class="share-buttons">
+                                    <button title="Share on Facebook"><i class="fab fa-facebook-f"></i></button>
+                                    <button title="Share on Twitter"><i class="fab fa-twitter"></i></button>
+                                    <button title="Share on LinkedIn"><i class="fab fa-linkedin-in"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Regular Medical Articles -->
+                    <article class="news-card">
+                        <div class="card-image">
+                            <img src="images/advanced-cardiac-surgery.jpg" alt="Advanced Cardiac Surgery">
+                            <span class="card-tag medical">Cardiology</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span><i class="far fa-calendar-alt"></i> March 19, 2024</span>
+                                <span><i class="far fa-user"></i> Dr. Michael Chen</span>
+                            </div>
+                            <h4>Minimally Invasive Heart Surgery Technique Reduces Recovery Time</h4>
+                            <p>New surgical approach reduces patient recovery time by 50% while maintaining optimal outcomes...</p>
+                            <div class="article-highlights">
+                                <span>50% Faster Recovery</span>
+                                <span>98% Success Rate</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                                <div class="share-buttons">
+                                    <button title="Share on Facebook"><i class="fab fa-facebook-f"></i></button>
+                                    <button title="Share on Twitter"><i class="fab fa-twitter"></i></button>
+                                    <button title="Share on LinkedIn"><i class="fab fa-linkedin-in"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-card">
+                        <div class="card-image">
+                            <img src="images/pediatric-care.jpg" alt="Pediatric Care">
+                            <span class="card-tag medical">Pediatrics</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span><i class="far fa-calendar-alt"></i> March 18, 2024</span>
+                                <span><i class="far fa-user"></i> Dr. Emily Parker</span>
+                            </div>
+                            <h4>New Pediatric Wing Opens with Advanced Care Facilities</h4>
+                            <p>State-of-the-art pediatric wing features child-friendly design and cutting-edge medical equipment...</p>
+                            <div class="article-highlights">
+                                <span><i class="fas fa-bed"></i> 50 Beds</span>
+                                <span><i class="fas fa-gamepad"></i> Play Areas</span>
+                                <span><i class="fas fa-robot"></i> Robot Assistance</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                                <div class="share-buttons">
+                                    <button title="Share on Facebook"><i class="fab fa-facebook-f"></i></button>
+                                    <button title="Share on Twitter"><i class="fab fa-twitter"></i></button>
+                                    <button title="Share on LinkedIn"><i class="fab fa-linkedin-in"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Research News Section -->
+            <div class="news-category-section" data-category="research">
+                <div class="section-header-mini">
+                    <h3>Research & Clinical Trials</h3>
+                    <p>Latest research findings and ongoing clinical studies</p>
+                </div>
+                
+                <div class="news-grid">
+                    <!-- Featured Research Article -->
+                    <article class="news-card featured">
+                        <div class="card-image">
+                            <img src="images/alzheimers-research.jpg" alt="Alzheimer's Research">
+                            <div class="card-overlay">
+                                <span class="card-tag featured">Featured</span>
+                                <span class="card-tag research">Research</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="date"><i class="far fa-calendar-alt"></i> March 17, 2024</span>
+                                <span class="team"><i class="fas fa-users"></i> Research Team</span>
+                            </div>
+                            <h4>Breakthrough in Early Alzheimer's Detection</h4>
+                            <p>Our neurology research team has identified new biomarkers that could enable early detection of Alzheimer's disease up to 10 years before symptoms appear...</p>
+                            <div class="article-highlights">
+                                <span>Study Duration: 5 Years</span>
+                                <span>Participants: 1500+</span>
+                                <span>Accuracy Rate: 95%</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                                <div class="share-buttons">
+                                    <button title="Share on Facebook"><i class="fab fa-facebook-f"></i></button>
+                                    <button title="Share on Twitter"><i class="fab fa-twitter"></i></button>
+                                    <button title="Share on LinkedIn"><i class="fab fa-linkedin-in"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Technology News Section -->
+            <div class="news-category-section" data-category="technology">
+                <div class="section-header-mini">
+                    <h3>Medical Technology Innovations</h3>
+                    <p>Latest advancements in healthcare technology</p>
+                </div>
+                
+                <div class="news-grid">
+                    <!-- Featured Technology Article -->
+                    <article class="news-card featured">
+                        <div class="card-image">
+                            <img src="images/ai-in-healthcare.jpg" alt="AI in Healthcare">
+                            <div class="card-overlay">
+                                <span class="card-tag featured">Featured</span>
+                                <span class="card-tag tech">Technology</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="date"><i class="far fa-calendar-alt"></i> March 16, 2024</span>
+                                <span class="department"><i class="fas fa-microchip"></i> Digital Health</span>
+                            </div>
+                            <h4>AI-Powered Diagnostic System Achieves 99% Accuracy</h4>
+                            <p>Our hospital implements advanced artificial intelligence system for rapid and accurate disease diagnosis, revolutionizing patient care through machine learning algorithms...</p>
+                            <div class="article-highlights">
+                                <span>Processing Time: &lt; 60 seconds</span>
+                                <span>Accuracy Rate: 99.2%</span>
+                                <span>Conditions Covered : 500+</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                                <div class="share-buttons">
+                                    <button title="Share on Facebook"><i class="fab fa-facebook-f"></i></button>
+                                    <button title="Share on Twitter"><i class="fab fa-twitter"></i></button>
+                                    <button title="Share on LinkedIn"><i class="fab fa-linkedin-in"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Regular Technology Articles -->
+                    <article class="news-card">
+                        <div class="card-image">
+                            <img src="images/GettyImages-511732538-1b53195d99af43ce838c3e73dbd77d04-1.webp" alt="Robotic Surgery">
+                            <div class="card-overlay">
+                            <span class="card-tag tech">Robotics</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span><i class="far fa-calendar-alt"></i> March 15, 2024</span>
+                                <span><i class="fas fa-robot"></i> Surgical Innovation</span>
+                            </div>
+                            <h4>Next-Generation Robotic Surgery System Installed</h4>
+                            <p>Advanced robotic surgery system enables ultra-precise procedures with 3D visualization...</p>
+                            <div class="article-highlights">
+                                <span><i class="fas fa-vr-cardboard"></i> 3D Visualization</span>
+                                <span><i class="fas fa-hand-paper"></i> Haptic Feedback</span>
+                                <span><i class="fas fa-crosshairs"></i> Sub-mm Precision</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                                <div class="share-buttons">
+                                    <button title="Share on Facebook"><i class="fab fa-facebook-f"></i></button>
+                                    <button title="Share on Twitter"><i class="fab fa-twitter"></i></button>
+                                    <button title="Share on LinkedIn"><i class="fab fa-linkedin-in"></i></button>
+                                </div>
+                                </div>
+                        </div>
+                    </article>
+
+                    <article class="news-card">
+                        <div class="card-image">
+                            <img src="images/telemedicine-platform.jpg" alt="Telemedicine Platform">
+                            <div class="card-overlay">
+                            <span class="card-tag tech">Digital Health</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span><i class="far fa-calendar-alt"></i> March 14, 2024</span>
+                                <span><i class="fas fa-laptop-medical"></i> Remote Care</span>
+                            </div>
+                            <h4>Enhanced Telemedicine Platform Launches</h4>
+                            <p>New virtual care platform provides seamless remote consultations with advanced features...</p>
+                            <div class="article-highlights">
+                                <span><i class="fas fa-video"></i> HD Video</span>
+                                <span><i class="fas fa-mobile-alt"></i> Mobile App</span>
+                                <span><i class="fas fa-lock"></i> HIPAA Compliant</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                                <div class="share-buttons">
+                                    <button title="Share on Facebook"><i class="fab fa-facebook-f"></i></button>
+                                    <button title="Share on Twitter"><i class="fab fa-twitter"></i></button>
+                                    <button title="Share on LinkedIn"><i class="fab fa-linkedin-in"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Wellness Section -->
+            <div class="news-category-section" data-category="wellness">
+                <div class="section-header-mini">
+                    <h3>Health & Wellness</h3>
+                    <p>Tips for healthy living and preventive care</p>
+                </div>
+                
+                <div class="news-grid">
+                    <!-- Featured Wellness Article -->
+                    <article class="news-card featured">
+                        <div class="card-image">
+                            <img src="images/mental-health.jpg" alt="Mental Health">
+                            <div class="card-overlay">
+                                <span class="card-tag featured">Featured</span>
+                                <span class="card-tag wellness">Wellness</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="date"><i class="far fa-calendar-alt"></i> March 13, 2024</span>
+                                <span class="expert"><i class="fas fa-user-md"></i> Mental Health Team</span>
+                            </div>
+                            <h4>Comprehensive Guide to Mental Wellness in 2024</h4>
+                            <p>Expert insights on maintaining mental health, managing stress, and building resilience in today's fast-paced world...</p>
+                            <div class="article-highlights">
+                                <span>Stress Management</span>
+                                <span>Emotional Balance</span>
+                                <span>Sleep Hygiene</span>
+                            </div>
+                            <div class="card-footer">
+                                <a href="#" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                                <div class="share-buttons">
+                                    <button title="Share on Facebook"><i class="fab fa-facebook-f"></i></button>
+                                    <button title="Share on Twitter"><i class="fab fa-twitter"></i></button>
+                                    <button title="Share on LinkedIn"><i class="fab fa-linkedin-in"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Regular Wellness Articles -->
+                    <article class="news-card">
+                        <div class="card-image">
+                            <img src="images/healthy-nutrition.jpg" alt="Healthy Nutrition">
+                            <div class="card-overlay">
+                                <span class="card-tag wellness">Nutrition</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span><i class="far fa-calendar-alt"></i> March 12, 2024</span>
+                                <span><i class="fas fa-utensils"></i> Nutrition</span>
+                            </div>
+                            <h4>Personalized Nutrition Plans for Optimal Health</h4>
+                            <p>Expert nutritionists share insights on customizing diet plans for individual health goals...</p>
+                            <div class="article-highlights">
+                                <span><i class="fas fa-apple-alt"></i> Meal Planning</span>
+                                <span><i class="fas fa-chart-line"></i> Progress Tracking</span>
+                                <span><i class="fas fa-users"></i> Group Support</span>
+                            </div>
+                            <div class="card-footer">
+                            <a href="#" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                            <div class="share-buttons">
+                                <button title="Share on Facebook"><i class="fab fa-facebook-f"></i></button>
+                                <button title="Share on Twitter"><i class="fab fa-twitter"></i></button>
+                                <button title="Share on LinkedIn"><i class="fab fa-linkedin-in"></i></button>
+                            </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-card">
+                        <div class="card-image">
+                            <img src="images/fitness-programs.jpg" alt="Fitness Programs">
+                            <div class="card-overlay">
+                                <span class="card-tag wellness">Fitness</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span><i class="far fa-calendar-alt"></i> March 11, 2024</span>
+                                <span><i class="fas fa-running"></i> Physical Activity</span>
+                            </div>
+                            <h4>Home Workout Programs for All Fitness Levels</h4>
+                            <p>Comprehensive exercise routines designed for home-based fitness improvement...</p>
+                            <div class="article-highlights">
+                                <span><i class="fas fa-video"></i> Video Guides</span>
+                                <span><i class="fas fa-dumbbell"></i> Equipment-Free</span>
+                                <span><i class="fas fa-clock"></i> 30-Min Sessions</span>
+                            </div>
+                            <div class="card-footer">
+                            <a href="#" class="read-more">Read Full Article  <i class="fas fa-arrow-right"></i></a>
+                            <div class="share-buttons">
+                                <button title="Share on Facebook"><i class="fab fa-facebook-f"></i></button>
+                                <button title="Share on Twitter"><i class="fab fa-twitter"></i></button>
+                                <button title="Share on LinkedIn"><i class="fab fa-linkedin-in"></i></button>
+                            </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Chat Toggle Button -->
+    <button class="chat-toggle" id="chatToggle">
+        <i class="fas fa-comments"></i>
+    </button>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget" id="chatWidget">
+        <!-- Header -->
+        <div class="chat-header">
+            <div class="chat-title">
+                <i class="fas fa-user-md"></i>
+                <h3>Medical Assistant</h3>
+            </div>
+            <div class="chat-actions">
+                <button class="new-chat-btn" aria-label="New Chat">
+                    <i class="fas fa-plus"></i>
+                </button>
+                <button class="minimize-btn" aria-label="Close Chat">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Messages Area -->
+        <div class="chat-body" id="chatMessages">
+            <div class="message bot-message">
+                <div class="message-content">
+                    <p>👋 Hello! How can I assist you today?</p>
+                    <span class="time">Now</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fixed Bottom Section -->
+        <div class="chat-bottom">
+            <div class="chat-suggestions">
+                <button data-query="appointment">📅 Book Appointment</button>
+                <button data-query="emergency">🚨 Emergency</button>
+                <button data-query="doctors">👨‍⚕️ Find Doctors</button>
+                <button data-query="hours">⏰ Working Hours</button>
+            </div>
+            
+            <div class="chat-input">
+                <div class="input-actions">
+                    <button class="upload-btn" aria-label="Upload File">
+                        <i class="fas fa-paperclip"></i>
+                    </button>
+                    <button class="voice-btn" aria-label="Voice Input">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                </div>
+                <input type="text" id="userInput" placeholder="Type your message...">
+                <button class="send-btn" id="sendBtn" disabled>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MedCare Hospital</h3>
+                    <p>Providing quality healthcare services since 1990.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="doctors.html">Doctors</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="emergency.html">Emergency</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-phone"></i> +1 234 567 8900</p>
+                    <p><i class="fas fa-envelope"></i> info@medcare.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Healthcare Ave, Medical City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MedCare Hospital. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/chat.js"></script>
+</body>
+</html> 

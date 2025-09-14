@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MedCare Hospital - Dashboard">
+    <title>Dashboard - MedCare Hospital</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Session Check Loader -->
+    <div id="sessionLoader" class="session-loader">
+        <div class="spinner"></div>
+    </div>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar">
+            <div class="sidebar-header">
+                <img src="images/MEDCARE_logo.png" alt="MedCare Logo" class="sidebar-logo">
+                <button id="sidebarToggle" class="sidebar-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">
+                        <a href="#overview"><i class="fas fa-home"></i> Overview</a>
+                    </li>
+                    <li>
+                        <a href="#appointments"><i class="fas fa-calendar-check"></i> Appointments</a>
+                    </li>
+                    <li>
+                        <a href="#medical-records"><i class="fas fa-file-medical"></i> Medical Records</a>
+                    </li>
+                    <li>
+                        <a href="#prescriptions"><i class="fas fa-prescription"></i> Prescriptions</a>
+                    </li>
+                    <li>
+                        <a href="#profile"><i class="fas fa-user"></i> Profile</a>
+                    </li>
+                    <li>
+                        <a href="#settings"><i class="fas fa-cog"></i> Settings</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <!-- Top Navigation -->
+            <header class="dashboard-header">
+                <div class="header-left">
+                    <button id="menuToggle" class="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="header-search">
+                        <input type="search" placeholder="Search appointments...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+                
+                <div class="header-actions">
+                    <div class="notifications-dropdown">
+                        <button class="notification-btn" id="notificationBtn">
+                            <i class="fas fa-bell"></i>
+                            <span class="notification-badge">3</span>
+                        </button>
+                        <div class="dropdown-content">
+                            <div class="dropdown-header">
+                                <h3>Notifications</h3>
+                                <button class="mark-all-read">Mark all as read</button>
+                            </div>
+                            <div class="notification-list">
+                                <!-- Notifications will be populated by JavaScript -->
+                            </div>
+                            <div class="dropdown-footer">
+                                <a href="#notifications">View all notifications</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="user-menu">
+                        <button id="userMenuBtn" class="user-menu-btn">
+                            <img id="userAvatar" src="images/avatar-placeholder.png" alt="User Avatar">
+                            <div class="user-info">
+                                <span id="userName">Loading...</span>
+                                <span class="user-role">Patient</span>
+                            </div>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        
+                        <div class="user-dropdown">
+                            <div class="dropdown-header">
+                                <img id="dropdownAvatar" src="images/avatar-placeholder.png" alt="User Avatar">
+                                <div class="dropdown-user-info">
+                                    <strong id="dropdownName">Loading...</strong>
+                                    <span id="dropdownEmail">user@example.com</span>
+                                </div>
+                            </div>
+                            
+                            <div class="dropdown-menu">
+                                <a href="#profile" class="dropdown-item">
+                                    <i class="fas fa-user"></i>
+                                    <span>My Profile</span>
+                                </a>
+                                <a href="#appointments" class="dropdown-item">
+                                    <i class="fas fa-calendar-check"></i>
+                                    <span>My Appointments</span>
+                                    <span class="badge">3</span>
+                                </a>
+                                <a href="#settings" class="dropdown-item">
+                                    <i class="fas fa-cog"></i>
+                                    <span>Settings</span>
+                                </a>
+                            </div>
+
+                            <div class="dropdown-divider"></div>
+                            
+                            <div class="dropdown-menu">
+                                <a href="#help" class="dropdown-item">
+                                    <i class="fas fa-question-circle"></i>
+                                    <span>Help & Support</span>
+                                </a>
+                                <a href="#" class="dropdown-item text-danger" id="deleteAccountBtn">
+                                    <i class="fas fa-trash-alt"></i>
+                                    <span>Delete Account</span>
+                                </a>
+                                <a href="#" class="dropdown-item" id="logoutBtn">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                    <span>Logout</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-content">
+                <!-- Overview Section -->
+                <section id="overview" class="dashboard-section active">
+                    <div class="welcome-section">
+                        <h1>Welcome, <span id="welcomeName">User</span>!</h1>
+                        <p class="date" id="currentDate"></p>
+                    </div>
+                    
+                    <!-- Stats Grid (existing) -->
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Upcoming Appointments</h3>
+                                <p class="stat-number">3</p>
+                            </div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-file-medical"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Medical Records</h3>
+                                <p class="stat-number">12</p>
+                            </div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-prescription"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Active Prescriptions</h3>
+                                <p class="stat-number">2</p>
+                            </div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-notes-medical"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Test Results</h3>
+                                <p class="stat-number">5</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Recent Activity (existing) -->
+                    <div class="recent-activity">
+                        <h2>Recent Activity</h2>
+                        <div class="activity-list" id="activityList">
+                            <!-- Activity items will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Appointments Section -->
+                <section id="appointments" class="dashboard-section">
+                    <div class="section-header">
+                        <h2>My Appointments</h2>
+                        <button class="btn-primary" id="newAppointmentBtn">
+                            <i class="fas fa-plus"></i> New Appointment
+                        </button>
+                    </div>
+                    
+                    <div class="appointments-container">
+                        <div class="appointments-filters">
+                            <select id="statusFilter">
+                                <option value="all">All Status</option>
+                                <option value="pending">Pending</option>
+                                <option value="confirmed">Confirmed</option>
+                                <option value="cancelled">Cancelled</option>
+                            </select>
+                            <div class="date-filter">
+                                <input type="date" id="dateFilter" />
+                            </div>
+                        </div>
+
+                        <div class="appointments-list" id="appointmentsList">
+                            <!-- Appointments will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Medical Records Section -->
+                <section id="medical-records" class="dashboard-section">
+                    <div class="section-header">
+                        <h2>Medical Records</h2>
+                        <div class="records-filter">
+                            <select id="recordTypeFilter">
+                                <option value="all">All Records</option>
+                                <option value="reports">Test Reports</option>
+                                <option value="prescriptions">Prescriptions</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="records-grid" id="recordsGrid"></div>
+                </section>
+
+                <!-- Profile Section -->
+                <section id="profile" class="dashboard-section">
+                    <div class="profile-container">
+                        <!-- Profile Header -->
+                        <div class="profile-header">
+                            <div class="profile-cover">
+                                <button class="change-cover-btn">
+                                    <i class="fas fa-camera"></i> Change Cover
+                                </button>
+                            </div>
+                            
+                            <div class="profile-info-bar">
+                                <div class="profile-avatar-wrapper">
+                                    <img id="profileAvatar" src="images/avatar-placeholder.png" alt="Profile Picture">
+                                    <button class="change-avatar-btn">
+                                        <i class="fas fa-camera"></i>
+                                    </button>
+                                </div>
+                                
+                                <div class="profile-basic-info">
+                                    <h1 id="profileName">Loading...</h1>
+                                    <p id="profileEmail">loading@email.com</p>
+                                    <span class="profile-status">Patient</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Profile Content -->
+                        <div class="profile-content">
+                            <!-- Profile Navigation -->
+                            <div class="profile-nav">
+                                <button class="profile-nav-btn active" data-tab="personal">
+                                    Personal Information
+                                </button>
+                                <button class="profile-nav-btn" data-tab="medical">
+                                    Medical History
+                                </button>
+                                <button class="profile-nav-btn" data-tab="security">
+                                    Security Settings
+                                </button>
+                            </div>
+
+                            <!-- Profile Forms -->
+                            <div class="profile-tabs">
+                                <!-- Personal Information Tab -->
+                                <div class="profile-tab active" id="personalTab">
+                                    <form id="personalInfoForm" class="profile-form">
+                                        <div class="form-row">
+                                            <div class="form-group">
+                                                <label for="firstName">First Name</label>
+                                                <input type="text" id="firstName" name="firstName" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="lastName">Last Name</label>
+                                                <input type="text" id="lastName" name="lastName" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="form-group">
+                                                <label for="phone">Phone Number</label>
+                                                <input type="tel" id="phone" name="phone" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="dob">Date of Birth</label>
+                                                <input type="date" id="dob" name="dob" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="address">Address</label>
+                                            <textarea id="address" name="address" rows="3"></textarea>
+                                        </div>
+
+                                        <div class="form-actions">
+                                            <button type="submit" class="btn-primary">Save Changes</button>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <!-- Medical History Tab -->
+                                <div class="profile-tab" id="medicalTab">
+                                    <div class="medical-history">
+                                        <div class="medical-info-card">
+                                            <h3>Blood Type</h3>
+                                            <select id="bloodType" name="bloodType">
+                                                <option value="">Select Blood Type</option>
+                                                <option value="A+">A+</option>
+                                                <option value="A-">A-</option>
+                                                <option value="B+">B+</option>
+                                                <option value="B-">B-</option>
+                                                <option value="O+">O+</option>
+                                                <option value="O-">O-</option>
+                                                <option value="AB+">AB+</option>
+                                                <option value="AB-">AB-</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="medical-info-card">
+                                            <h3>Allergies</h3>
+                                            <div id="allergiesList" class="tags-input">
+                                                <input type="text" placeholder="Add allergy and press Enter">
+                                            </div>
+                                        </div>
+
+                                        <div class="medical-info-card">
+                                            <h3>Current Medications</h3>
+                                            <div id="medicationsList" class="tags-input">
+                                                <input type="text" placeholder="Add medication and press Enter">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Security Settings Tab -->
+                                <div class="profile-tab" id="securityTab">
+                                    <form id="securityForm" class="profile-form">
+                                        <div class="form-group">
+                                            <label for="currentPassword">Current Password</label>
+                                            <input type="password" id="currentPassword" name="currentPassword">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="newPassword">New Password</label>
+                                            <input type="password" id="newPassword" name="newPassword">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="confirmPassword">Confirm New Password</label>
+                                            <input type="password" id="confirmPassword" name="confirmPassword">
+                                        </div>
+
+                                        <div class="form-actions">
+                                            <button type="submit" class="btn-primary">Update Password</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>

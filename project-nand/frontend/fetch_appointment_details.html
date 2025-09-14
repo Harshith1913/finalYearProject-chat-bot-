@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MedCare Hospital - Contact Submissions Management">
+    <title>Contact Submissions - MedCare Hospital</title>
+    
+    <link rel="icon" type="image/x-icon" href="images/MEDCARE_logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <style>
+        /* Additional styles for the contact submissions table */
+        .submissions-section {
+            padding: 120px 0;
+            background: #f8f9fa;
+        }
+
+        .submissions-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .submissions-header {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .submissions-table {
+            width: 100%;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .submissions-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .submissions-table th {
+            background: #007bff;
+            color: white;
+            padding: 1rem;
+            text-align: left;
+        }
+
+        .submissions-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .submissions-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .submissions-table tr:hover {
+            background: #f8f9fa;
+        }
+
+        .message-cell {
+            max-width: 300px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .date-cell {
+            white-space: nowrap;
+        }
+
+        @media (max-width: 768px) {
+            .submissions-table {
+                overflow-x: auto;
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar container">
+            <button class="sidebar-toggle" aria-label="Open Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="logo-container">
+                <img src="images/MEDCARE_logo.png" alt="MedCare Logo">
+            </div>
+            
+            <div class="nav-links">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="doctors.html" class="nav-link">Our Doctors</a></li>
+                    <li><a href="appointments.html" class="nav-link">Appointments</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="emergency.html" class="nav-link">Emergency</a></li>
+                </ul>
+            </div>
+
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <span class="hamburger"></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <!-- Same sidebar as in index.html -->
+        <div class="sidebar-header">
+            <div class="logo">
+                <img src="images/MEDCARE_logo.png" alt="MedCare Logo">
+            </div>
+            <button class="close-sidebar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="services.html"><i class="fas fa-stethoscope"></i> Services</a></li>
+                <li><a href="doctors.html"><i class="fas fa-user-md"></i> Our Doctors</a></li>
+                <li><a href="appointments.html"><i class="fas fa-calendar-check"></i>Appointments</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="emergency.html"><i class="fas fa-ambulance"></i> Emergency</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay"></div>
+
+    <!-- Main Content -->
+    <section class="submissions-section">
+        <div class="submissions-container">
+            <div class="submissions-header">
+                <h1>Contact Submissions</h1>
+                <p>View and manage contact form submissions</p>
+            </div>
+            
+            <div class="submissions-table">
+                <table id="appointmentsTable">
+                    <!-- Appointment data will be populated here -->
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MedCare Hospital</h3>
+                    <p>Providing quality healthcare services since 1990.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="doctors.html">Doctors</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="emergency.html">Emergency</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-phone"></i> +1 234 567 8900</p>
+                    <p><i class="fas fa-envelope"></i> info@medcare.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Healthcare Ave, Medical City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MedCare Hospital. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Example of fetching data and updating the table
+        fetch('https://www.bmreducation.com/medcare/fetch_appointment')
+            .then(response => response.json())
+            .then(data => {
+                if (data.success && data.data.length > 0) {
+                    var table = document.getElementById('appointmentsTable');
+                    if (table) {
+                        var html = '<tr><th>Reference No</th><th>Patient Name</th><th>Date</th><th>Time</th><th>Doctor</th><th>Status</th></tr>';
+                        data.data.forEach(appointment => {
+                            html += `<tr>
+                                <td>${appointment.reference_no}</td>
+                                <td>${appointment.patient_name}</td>
+                                <td>${appointment.appointment_date}</td>
+                                <td>${appointment.appointment_time}</td>
+                                <td>${appointment.doctor_name}</td>
+                                <td>${appointment.status}</td>
+                            </tr>`;
+                        });
+                        table.innerHTML = html;
+                    } else {
+                        console.error('appointmentsTable element not found');
+                    }
+                } else {
+                    console.error('Failed to fetch appointment data');
+                }
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    </script>
+</body>
+</html>

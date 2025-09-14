@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MedCare Hospital - Leading healthcare provider offering comprehensive medical services, experienced doctors, and state-of-the-art facilities.">
+    <meta name="keywords" content="hospital, healthcare, medical services, doctors, appointments, emergency care">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="MedCare Hospital - Your Health, Our Priority">
+    <meta property="og:description" content="Leading healthcare provider with comprehensive medical services and experienced doctors.">
+    <meta property="og:image" content="images/MEDCARE_logo.png">
+    <meta property="og:url" content="https://yoursite.com">
+    
+    <link rel="canonical" href="https://yoursite.com">
+    <title>Our Doctors - MedCare Hospital</title>
+    
+    <link rel="icon" type="image/x-icon" href="images/MEDCARE_logo.png">
+    
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="js/main.js" as="script">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Hospital",
+        "name": "MedCare Hospital",
+        "description": "Leading healthcare provider with comprehensive medical services",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Healthcare Ave",
+            "addressLocality": "Medical City",
+            "postalCode": "12345",
+            "addressCountry": "US"
+        },
+        "telephone": "+1-234-567-8900"
+    }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar container">
+            <!-- Sidebar Toggle Button -->
+            <button class="sidebar-toggle" aria-label="Open Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="logo-container">
+                <img src="images/MEDCARE_logo.png" alt="MedCare Logo">
+            </div>
+            
+            <div class="nav-links">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="doctors.html" class="nav-link active">Our Doctors</a></li>
+                    <li><a href="appointments.html" class="nav-link">Appointments</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="emergency.html" class="nav-link">Emergency</a></li>
+                </ul>
+            </div>
+
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <span class="hamburger"></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <img src="images/MEDCARE_logo.png" alt="MedCare Logo">
+            </div>
+            <button class="close-sidebar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="services.html"><i class="fas fa-stethoscope"></i> Services</a></li>
+                <li><a href="doctors.html" class="sidebar-active"><i class="fas fa-user-md"></i> Our Doctors</a></li>
+                <li><a href="appointments.html"><i class="fas fa-calendar-check"></i>Appointments</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="emergency.html"><i class="fas fa-ambulance"></i> Emergency</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay"></div>
+
+    
+    <section class="about-hero">
+        <div class="container">
+            <div class="about-hero-content">
+                <h1>Our Medical Experts</h1>
+                <p>Meet our team of experienced healthcare professionals</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="doctors-section" id="doctors">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Our Medical Specialists</span>
+                <h2>Meet Our Expert Doctors</h2>
+                <p>Trust your health with our team of experienced healthcare professionals</p>
+            </div>
+            
+            <div class="doctors-filter">
+                <button class="filter-btn active" data-filter="cardiology">Cardiology</button>
+                <button class="filter-btn" data-filter="neurology">Neurology</button>
+                <button class="filter-btn" data-filter="pediatrics">Pediatrics</button>
+                <button class="filter-btn" data-filter="orthopedics">Orthopedics</button>
+                <button class="filter-btn" data-filter="oncology">Oncology</button>
+            </div>
+
+            <div class="doctors-grid">
+                <!-- Cardiologists -->
+                <div class="doctor-card" data-specialty="cardiology">
+                    <div class="doctor-img">
+                        <img src="images/founder-dr-sarah-johnson-1.jpg" alt="Dr. Sarah Johnson">
+                        <div class="doctor-overlay">
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>Dr. Sarah Johnson</h3>
+                        <span class="specialty">Senior Cardiologist</span>
+                        <div class="credentials-tags">
+                            <span>MD, FACC</span>
+                            <span>15+ Years</span>
+                        </div>
+                        <div class="doctor-stats">
+                            <div class="stat">
+                                <span class="number">1500+</span>
+                                <span class="label">Patients</span>
+                            </div>
+                            <div class="stat">
+                                <span class="number">98%</span>
+                                <span class="label">Success Rate</span>
+                            </div>
+                        </div>
+                        <div class="doctor-schedule">
+                            <div class="schedule-item">
+                                <i class="far fa-clock"></i>
+                                <span>Mon - Fri: 9:00 AM - 5:00 PM</span>
+                            </div>
+                            <div class="schedule-item">
+                                <i class="far fa-hospital"></i>
+                                <span>Main Hospital, Floor 3</span>
+                            </div>
+                        </div>
+                        <div class="doctor-actions">
+                            <a href="appointments.html" class="btn-appointment">Book Appointment</a>
+                            <a href="doctor-sarah-johnson.html" class="btn-profile">View Profile</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="doctor-card" data-specialty="cardiology">
+                    <div class="doctor-img">
+                        <img src="images/michael-chen.jpg" alt="Dr. Michael Chen">
+                        <div class="doctor-overlay">
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>Dr. Michael Chen</h3>
+                        <span class="specialty">Interventional Cardiologist</span>
+                        <div class="credentials-tags">
+                            <span>MD, FSCAI</span>
+                            <span>12+ Years</span>
+                        </div>
+                        <div class="doctor-stats">
+                            <div class="stat">
+                                <span class="number">1200+</span>
+                                <span class="label">Patients</span>
+                            </div>
+                            <div class="stat">
+                                <span class="number">96%</span>
+                                <span class="label">Success Rate</span>
+                            </div>
+                        </div>
+                        <div class="doctor-schedule">
+                            <div class="schedule-item">
+                                <i class="far fa-clock"></i>
+                                <span>Mon - Thu: 10:00 AM - 6:00 PM</span>
+                            </div>
+                            <div class="schedule-item">
+                                <i class="far fa-hospital"></i>
+                                <span>Cardiac Center, Floor 2</span>
+                            </div>
+                        </div>
+                        <div class="doctor-actions">
+                            <a href="appointments.html" class="btn-appointment">Book Appointment</a>
+                            <a href="doctor-michael-chen.html" class="btn-profile">View Profile</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Neurologists -->
+                <div class="doctor-card" data-specialty="neurology">
+                    <div class="doctor-img">
+                        <img src="images/emily-parker.jpg" alt="Dr. Emily Parker">
+                        <div class="doctor-overlay">
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>Dr. Emily Parker</h3>
+                        <span class="specialty">Senior Neurologist</span>
+                        <div class="credentials-tags">
+                            <span>MD, PhD</span>
+                            <span>10+ Years</span>
+                        </div>
+                        <div class="doctor-stats">
+                            <div class="stat">
+                                <span class="number">800+</span>
+                                <span class="label">Patients</span>
+                            </div>
+                            <div class="stat">
+                                <span class="number">95%</span>
+                                <span class="label">Success Rate</span>
+                            </div>
+                        </div>
+                        <div class="doctor-schedule">
+                            <div class="schedule-item">
+                                <i class="far fa-clock"></i>
+                                <span>Tue - Sat: 9:00 AM - 4:00 PM</span>
+                            </div>
+                            <div class="schedule-item">
+                                <i class="far fa-hospital"></i>
+                                <span>Neurology Wing, Floor 4</span>
+                            </div>
+                        </div>
+                        <div class="doctor-actions">
+                            <a href="appointments.html" class="btn-appointment">Book Appointment</a>
+                            <a href="doctor-emily-parker.html" class="btn-profile">View Profile</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="doctor-card" data-specialty="neurology">
+                    <div class="doctor-img">
+                        <img src="images/robert-wilson.jpg" alt="Dr. Robert Wilson">
+                        <div class="doctor-overlay">
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>Dr. Robert Wilson</h3>
+                        <span class="specialty">Neurosurgeon</span>
+                        <div class="credentials-tags">
+                            <span>MD, FAANS</span>
+                            <span>18+ Years</span>
+                        </div>
+                        <div class="doctor-stats">
+                            <div class="stat">
+                                <span class="number">1000+</span>
+                                <span class="label">Surgeries</span>
+                            </div>
+                            <div class="stat">
+                                <span class="number">97%</span>
+                                <span class="label">Success Rate</span>
+                            </div>
+                        </div>
+                        <div class="doctor-schedule">
+                            <div class="schedule-item">
+                                <i class="far fa-clock"></i>
+                                <span>Mon - Fri: 8:00 AM - 3:00 PM</span>
+                            </div>
+                            <div class="schedule-item">
+                                <i class="far fa-hospital"></i>
+                                <span>Neurosurgery Dept, Floor 5</span>
+                            </div>
+                        </div>
+                        <div class="doctor-actions">
+                            <a href="appointments.html" class="btn-appointment">Book Appointment</a>
+                            <a href="doctor-robert-wilson.html" class="btn-profile">View Profile</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pediatricians -->
+                <div class="doctor-card" data-specialty="pediatrics">
+                    <div class="doctor-img">
+                        <img src="images/lisa-martinez.jpg" alt="Dr. Lisa Martinez">
+                        <div class="doctor-overlay">
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>Dr. Lisa Martinez</h3>
+                        <span class="specialty">Senior Pediatrician</span>
+                        <div class="credentials-tags">
+                            <span>MD, FAAP</span>
+                            <span>14+ Years</span>
+                        </div>
+                        <div class="doctor-stats">
+                            <div class="stat">
+                                <span class="number">2000+</span>
+                                <span class="label">Young Patients</span>
+                            </div>
+                            <div class="stat">
+                                <span class="number">99%</span>
+                                <span class="label">Parent Satisfaction</span>
+                            </div>
+                        </div>
+                        <div class="doctor-schedule">
+                            <div class="schedule-item">
+                                <i class="far fa-clock"></i>
+                                <span>Mon - Fri: 9:00 AM - 6:00 PM</span>
+                            </div>
+                            <div class="schedule-item">
+                                <i class="far fa-hospital"></i>
+                                <span>Children's Wing, Floor 2</span>
+                            </div>
+                        </div>
+                        <div class="doctor-actions">
+                            <a href="appointments.html" class="btn-appointment">Book Appointment</a>
+                            <a href="doctor-lisa-martinez.html" class="btn-profile">View Profile</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Orthopedics -->
+                <div class="doctor-card" data-specialty="orthopedics">
+                    <div class="doctor-img">
+                        <img src="images/james-anderson.jpg" alt="Dr. James Anderson">
+                        <div class="doctor-overlay">
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>Dr. James Anderson</h3>
+                        <span class="specialty">Orthopedic Surgeon</span>
+                        <div class="credentials-tags">
+                            <span>MD, FAAOS</span>
+                            <span>20+ Years</span>
+                        </div>
+                        <div class="doctor-stats">
+                            <div class="stat">
+                                <span class="number">1800+</span>
+                                <span class="label">Surgeries</span>
+                            </div>
+                            <div class="stat">
+                                <span class="number">96%</span>
+                                <span class="label">Success Rate</span>
+                            </div>
+                        </div>
+                        <div class="doctor-schedule">
+                            <div class="schedule-item">
+                                <i class="far fa-clock"></i>
+                                <span>Mon - Thu: 8:00 AM - 4:00 PM</span>
+                            </div>
+                            <div class="schedule-item">
+                                <i class="far fa-hospital"></i>
+                                <span>Orthopedic Center, Floor 3</span>
+                            </div>
+                        </div>
+                        <div class="doctor-actions">
+                            <a href="appointments.html" class="btn-appointment">Book Appointment</a>
+                            <a href="doctor-james-anderson.html" class="btn-profile">View Profile</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Oncologists -->
+                <div class="doctor-card" data-specialty="oncology">
+                    <div class="doctor-img">
+                        <img src="images/rachel-kim.jpg" alt="Dr. Rachel Kim">
+                        <div class="doctor-overlay">
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>Dr. Rachel Kim</h3>
+                        <span class="specialty">Medical Oncologist</span>
+                        <div class="credentials-tags">
+                            <span>MD, PhD</span>
+                            <span>16+ Years</span>
+                        </div>
+                        <div class="doctor-stats">
+                            <div class="stat">
+                                <span class="number">1200+</span>
+                                <span class="label">Patients</span>
+                            </div>
+                            <div class="stat">
+                                <span class="number">94%</span>
+                                <span class="label">Recovery Rate</span>
+                            </div>
+                        </div>
+                        <div class="doctor-schedule">
+                            <div class="schedule-item">
+                                <i class="far fa-clock"></i>
+                                <span>Mon - Fri: 8:30 AM - 4:30 PM</span>
+                            </div>
+                            <div class="schedule-item">
+                                <i class="far fa-hospital"></i>
+                                <span>Cancer Center, Floor 4</span>
+                            </div>
+                        </div>
+                        <div class="doctor-actions">
+                            <a href="appointments.html" class="btn-appointment">Book Appointment</a>
+                            <a href="doctor-rachel-kim.html" class="btn-profile">View Profile</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="doctor-card" data-specialty="oncology">
+                    <div class="doctor-img">
+                        <img src="images/david-thompson.jpg" alt="Dr. David Thompson">
+                        <div class="doctor-overlay">
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>Dr. David Thompson</h3>
+                        <span class="specialty">Radiation Oncologist</span>
+                        <div class="credentials-tags">
+                            <span>MD, FASTRO</span>
+                            <span>13+ Years</span>
+                        </div>
+                        <div class="doctor-stats">
+                            <div class="stat">
+                                <span class="number">900+</span>
+                                <span class="label">Treatments</span>
+                            </div>
+                            <div class="stat">
+                                <span class="number">95%</span>
+                                <span class="label">Success Rate</span>
+                            </div>
+                        </div>
+                        <div class="doctor-schedule">
+                            <div class="schedule-item">
+                                <i class="far fa-clock"></i>
+                                <span>Tue - Sat: 9:00 AM - 5:00 PM</span>
+                            </div>
+                            <div class="schedule-item">
+                                <i class="far fa-hospital"></i>
+                                <span>Radiation Therapy, Floor 4</span>
+                            </div>
+                        </div>
+                        <div class="doctor-actions">
+                            <a href="appointments.html" class="btn-appointment">Book Appointment</a>
+                            <a href="doctor-david-thompson.html" class="btn-profile">View Profile</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chat Toggle Button -->
+    <button class="chat-toggle" id="chatToggle">
+        <i class="fas fa-comments"></i>
+    </button>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget" id="chatWidget">
+        <!-- Header -->
+        <div class="chat-header">
+            <div class="chat-title">
+                <i class="fas fa-user-md"></i>
+                <h3>Medical Assistant</h3>
+            </div>
+            <div class="chat-actions">
+                <button class="new-chat-btn" aria-label="New Chat">
+                    <i class="fas fa-plus"></i>
+                </button>
+                <button class="minimize-btn" aria-label="Close Chat">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Messages Area -->
+        <div class="chat-body" id="chatMessages">
+            <div class="message bot-message">
+                <div class="message-content">
+                    <p>👋 Hello! How can I assist you today?</p>
+                    <span class="time">Now</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fixed Bottom Section -->
+        <div class="chat-bottom">
+            <div class="chat-suggestions">
+                <button data-query="appointment">📅 Book Appointment</button>
+                <button data-query="emergency">🚨 Emergency</button>
+                <button data-query="doctors">👨‍⚕️ Find Doctors</button>
+                <button data-query="hours">⏰ Working Hours</button>
+            </div>
+            
+            <div class="chat-input">
+                <div class="input-actions">
+                    <button class="upload-btn" aria-label="Upload File">
+                        <i class="fas fa-paperclip"></i>
+                    </button>
+                    <button class="voice-btn" aria-label="Voice Input">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                </div>
+                <input type="text" id="userInput" placeholder="Type your message...">
+                <button class="send-btn" id="sendBtn" disabled>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+   
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MedCare Hospital</h3>
+                    <p>Providing quality healthcare services since 1990.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="doctors.html">Doctors</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="emergency.html">Emergency</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-phone"></i> +1 234 567 8900</p>
+                    <p><i class="fas fa-envelope"></i> info@medcare.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Healthcare Ave, Medical City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MedCare Hospital. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/chat.js"></script>
+</body>
+</html> 

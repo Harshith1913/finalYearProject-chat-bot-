@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MedCare Hospital - Leading healthcare provider offering comprehensive medical services, experienced doctors, and state-of-the-art facilities.">
+    <meta name="keywords" content="hospital, healthcare, medical services, doctors, appointments, emergency care">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="MedCare Hospital - Your Health, Our Priority">
+    <meta property="og:description" content="Leading healthcare provider with comprehensive medical services and experienced doctors.">
+    <meta property="og:image" content="https://yoursite.com/images/og-image.jpg">
+    <meta property="og:url" content="https://yoursite.com">
+    
+    <link rel="canonical" href="https://yoursite.com">
+    <title>Our Services - MedCare Hospital</title>
+    <link rel="icon" type="image/x-icon" href="images/MEDCARE_logo.png">
+    
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="js/main.js" as="script">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Hospital",
+        "name": "MedCare Hospital",
+        "description": "Leading healthcare provider with comprehensive medical services",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Healthcare Ave",
+            "addressLocality": "Medical City",
+            "postalCode": "12345",
+            "addressCountry": "US"
+        },
+        "telephone": "+1-234-567-8900"
+    }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar container">
+            <!-- Sidebar Toggle Button -->
+            <button class="sidebar-toggle" aria-label="Open Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="logo-container">
+                <img src="images/MEDCARE_logo.png" alt="MedCare Logo">
+            </div>
+            
+            <div class="nav-links">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="services.html" class="nav-link active">Services</a></li>
+                    <li><a href="doctors.html" class="nav-link">Our Doctors</a></li>
+                    <li><a href="appointments.html" class="nav-link">Appointments</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="emergency.html" class="nav-link">Emergency</a></li>
+                </ul>
+            </div>
+
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <span class="hamburger"></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <img src="images/MEDCARE_logo.png" alt="MedCare Logo">
+            </div>
+            <button class="close-sidebar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="services.html" class="sidebar-active"><i class="fas fa-stethoscope"></i> Services</a></li>
+                <li><a href="doctors.html"><i class="fas fa-user-md"></i> Our Doctors</a></li>
+                <li><a href="appointments.html"><i class="fas fa-calendar-check"></i>Appointments</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="emergency.html"><i class="fas fa-ambulance"></i> Emergency</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay"></div>
+
+    <section class="about-hero">
+        <div class="container">
+            <div class="about-hero-content">
+                <h1>Our Medical Services</h1>
+                <p>Comprehensive Healthcare Solutions for Every Need</p>
+            </div>
+        </div>
+    </section>
+    <section class="services-preview">
+        <div class="container">
+            <div class="services-grid">
+                <!-- Existing Services -->
+                <div class="service-card">
+                    <i class="fas fa-heart-pulse"></i>
+                    <h3>Cardiology</h3>
+                    <p>Comprehensive heart care services with state-of-the-art facilities.</p>
+                    <a href="cardiology.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>Neurology</h3>
+                    <p>Expert neurological care for various brain and nervous system conditions.</p>
+                    <a href="neurology.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-bone"></i>
+                    <h3>Orthopedics</h3>
+                    <p>Specialized care for bones, joints, and musculoskeletal conditions.</p>
+                    <a href="orthopedics.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-stethoscope"></i>
+                    <h3>General Medicine</h3>
+                    <p>Primary healthcare services for all your medical needs.</p>
+                    <a href="general-medicine.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+    
+                <!-- New Services -->
+                <div class="service-card">
+                    <i class="fas fa-radiation"></i>
+                    <h3>Oncology</h3>
+                    <p>Advanced cancer treatment and comprehensive care programs.</p>
+                    <a href="oncology.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-x-ray"></i>
+                    <h3>Radiology</h3>
+                    <p>Advanced imaging services and diagnostic procedures.</p>
+                    <a href="radiology.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-user-md"></i>
+                    <h3>General Surgery</h3>
+                    <p>Expert surgical care with minimally invasive options.</p>
+                    <a href="general-surgery.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="emergency-info">
+        <div class="container">
+            <div class="emergency-card">
+                <i class="fas fa-phone-alt"></i>
+                <h3>Emergency Hotline</h3>
+                <p>Available 24/7 for urgent medical assistance</p>
+                <div>
+                    <div class="phone">1-800-MEDICARE</div>
+                    <div class="response-time">Average Response Time: 3 mins</div>
+                </div>
+            </div>
+
+            <div class="emergency-card">
+                <i class="fas fa-ambulance"></i>
+                <h3>Ambulance Service</h3>
+                <p>Quick response emergency medical transport</p>
+                <div>
+                    <div class="phone">108</div>
+                    <div class="response-time">Immediate Dispatch Available</div>
+                </div>
+            </div>
+
+            <div class="emergency-card">
+                <i class="fas fa-clock"></i>
+                <h3>Working Hours</h3>
+                <p>Regular consultation schedule</p>
+                <div class="schedule-list">
+                    <div class="schedule-item">
+                        <span>Weekdays:</span>
+                        <span>8:00 AM - 8:00 PM</span>
+                    </div>
+                    <div class="schedule-item">
+                        <span>Weekends:</span>
+                        <span>9:00 AM - 6:00 PM</span>
+                    </div>
+                    <div class="schedule-note">*Emergency services available 24/7</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chat Toggle Button -->
+    <button class="chat-toggle" id="chatToggle">
+        <i class="fas fa-comments"></i>
+    </button>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget" id="chatWidget">
+        <!-- Header -->
+        <div class="chat-header">
+            <div class="chat-title">
+                <i class="fas fa-user-md"></i>
+                <h3>Medical Assistant</h3>
+            </div>
+            <div class="chat-actions">
+                <button class="new-chat-btn" aria-label="New Chat">
+                    <i class="fas fa-plus"></i>
+                </button>
+                <button class="minimize-btn" aria-label="Close Chat">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Messages Area -->
+        <div class="chat-body" id="chatMessages">
+            <div class="message bot-message">
+                <div class="message-content">
+                    <p>👋 Hello! How can I assist you today?</p>
+                    <span class="time">Now</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fixed Bottom Section -->
+        <div class="chat-bottom">
+            <div class="chat-suggestions">
+                <button data-query="appointment">📅 Book Appointment</button>
+                <button data-query="emergency">🚨 Emergency</button>
+                <button data-query="doctors">👨‍⚕️ Find Doctors</button>
+                <button data-query="hours">⏰ Working Hours</button>
+            </div>
+            
+            <div class="chat-input">
+                <div class="input-actions">
+                    <button class="upload-btn" aria-label="Upload File">
+                        <i class="fas fa-paperclip"></i>
+                    </button>
+                    <button class="voice-btn" aria-label="Voice Input">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                </div>
+                <input type="text" id="userInput" placeholder="Type your message...">
+                <button class="send-btn" id="sendBtn" disabled>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+   
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MedCare Hospital</h3>
+                    <p>Providing quality healthcare services since 1990.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="doctors.html">Doctors</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="emergency.html">Emergency</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-phone"></i> +1 234 567 8900</p>
+                    <p><i class="fas fa-envelope"></i> info@medcare.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Healthcare Ave, Medical City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MedCare Hospital. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/chat.js"></script>
+</body>
+</html>

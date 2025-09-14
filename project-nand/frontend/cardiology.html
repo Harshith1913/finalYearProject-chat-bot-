@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MedCare Hospital - Leading healthcare provider offering comprehensive medical services, experienced doctors, and state-of-the-art facilities.">
+    <meta name="keywords" content="hospital, healthcare, medical services, doctors, appointments, emergency care">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Cardiology Department - MedCare Hospital">
+    <meta property="og:description" content="Leading healthcare provider with comprehensive medical services and experienced doctors.">
+    <meta property="og:image" content="https://yoursite.com/images/og-image.jpg">
+    <meta property="og:url" content="https://yoursite.com">
+    
+    <link rel="canonical" href="https://yoursite.com">
+    <title>Cardiology Department - MedCare Hospital</title>
+    
+    <link rel="icon" type="image/x-icon" href="images/MEDCARE_logo.png">
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="js/main.js" as="script">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Hospital",
+        "name": "MedCare Hospital",
+        "description": "Leading healthcare provider with comprehensive medical services",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Healthcare Ave",
+            "addressLocality": "Medical City",
+            "postalCode": "12345",
+            "addressCountry": "US"
+        },
+        "telephone": "+1-234-567-8900"
+    }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar container">
+            <!-- Sidebar Toggle Button -->
+            <button class="sidebar-toggle" aria-label="Open Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="logo-container">
+                <img src="images/MEDCARE_logo.png" alt="MedCare Logo">
+            </div>
+            
+            <div class="nav-links">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="doctors.html" class="nav-link">Our Doctors</a></li>
+                    <li><a href="appointments.html" class="nav-link">Appointments</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                    <li><a href="emergency.html" class="nav-link">Emergency</a></li>
+                </ul>
+            </div>
+
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <span class="hamburger"></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <img src="images/MEDCARE_logo.png" alt="MedCare Logo">
+            </div>
+            <button class="close-sidebar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="services.html"><i class="fas fa-stethoscope"></i> Services</a></li>
+                <li><a href="doctors.html"><i class="fas fa-user-md"></i> Our Doctors</a></li>
+                <li><a href="appointments.html"><i class="fas fa-calendar-check"></i>Appointments</a></li>
+                <li><a href="contact.html" class="sidebar-active"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="emergency.html"><i class="fas fa-ambulance"></i> Emergency</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay"></div>
+
+    <section class="emergency-hero">
+        <div class="container">
+            <div class="emergency-hero-content">
+                <span class="service-badge">Department of Cardiology</span>
+                <h1>Advanced Cardiac Care</h1>
+                <p>Comprehensive heart care with state-of-the-art technology</p>
+                <div class="emergency-contacts">
+                    <a href="appointments.html" class="emergency-btn">Book Appointment</a>
+                    <a href="tel:+12345678910" class="emergency-btn pulse">
+                        <i class="fas fa-hospital"></i>
+                        Emergency: +1 234 567 8910
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<!-- Add this section after the emergency-hero section and before the department-head section -->
+<section class="department-info">
+    <div class="container">
+        <div class="info-grid">
+            <div class="info-card">
+                <i class="fas fa-user-md"></i>
+                <h3>Head of Department</h3>
+                <p>Dr. John Smith</p>
+                <span class="credentials">MD, FACC, FSCAI</span>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Location</h3>
+                <p>Cardiology Wing, Floor 3</p>
+                <span class="additional-info">Main Building</span>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-clock"></i>
+                <h3>Working Hours</h3>
+                <p>24/7 Emergency Cardiac Care</p>
+                <span class="additional-info">Consultations: 8AM - 6PM</span>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-phone-alt"></i>
+                <h3>Emergency Contact</h3>
+                <p>+1 234 567 8910</p>
+                <span class="additional-info">Available 24/7</span>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Services Section -->
+    <section class="service-details">
+        <div class="container">
+                <h2>Our Cardiology Services</h2>
+                <div class="services-list">
+                    <div class="service-item">
+                    <i class="fas fa-heartbeat"></i>
+                    <div class="service-content">
+                        <h3>Interventional Cardiology</h3>
+                        <p>Advanced procedures for heart disease treatment including angioplasty and stenting.</p>
+                    </div>
+            
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-heart"></i>
+                    <div class="service-content">
+                        <h3>Cardiac Surgery</h3>
+                        <p>State-of-the-art surgical procedures for complex cardiac conditions.</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-notes-medical"></i>
+                    <div class="service-content">
+                        <h3>Heart Disease Treatment</h3>
+                        <p>Comprehensive care for various heart conditions and diseases.</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-running"></i>
+                    <div class="service-content">
+                        <h3>Cardiac Rehabilitation</h3>
+                        <p>Personalized recovery programs for heart patients.</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-wave-square"></i>
+                    <div class="service-content">
+                        <h3>ECG/EKG Services</h3>
+                        <p>Advanced cardiac monitoring and diagnostic testing.</p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <div class="service-content">
+                        <h3>Stress Testing</h3>
+                        <p>Comprehensive cardiac stress evaluation and monitoring.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="wellness-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Cardiac Wellness Programs</h2>
+                <p>Comprehensive heart health management and prevention</p>
+            </div>
+            <div class="wellness-grid">
+                <div class="wellness-card">
+                    <img src="images/heart-disease-prevention.jpg" alt="Heart Disease Prevention">
+                    <div class="wellness-info">
+                        <h3>Preventive Cardiology</h3>
+                        <ul>
+                            <li>Heart health screenings</li>
+                            <li>Cholesterol management</li>
+                            <li>Blood pressure monitoring</li>
+                            <li>Risk factor assessment</li>
+                            <li>Family history evaluation</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="wellness-card">
+                    <img src="images/cardiac-rehabilitation.jpg" alt="Cardiac Rehabilitation">
+                    <div class="wellness-info">
+                        <h3>Cardiac Rehabilitation</h3>
+                        <ul>
+                            <li>Supervised exercise programs</li>
+                            <li>Heart-healthy diet planning</li>
+                            <li>Stress management</li>
+                            <li>Smoking cessation support</li>
+                            <li>Lifestyle modification coaching</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="wellness-card">
+                    <img src="images/heart-education.jpg" alt="Heart Education">
+                    <div class="wellness-info">
+                        <h3>Heart Health Education</h3>
+                        <ul>
+                            <li>Heart disease awareness</li>
+                            <li>Nutrition workshops</li>
+                            <li>Exercise guidance</li>
+                            <li>Medication management</li>
+                            <li>Support group sessions</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="wellness-card">
+                    <img src="images/heart-monitoring.jpg" alt="Heart Monitoring">
+                    <div class="wellness-info">
+                        <h3>Remote Heart Monitoring</h3>
+                        <ul>
+                            <li>24/7 heart rhythm monitoring</li>
+                            <li>Mobile ECG tracking</li>
+                            <li>Digital health integration</li>
+                            <li>Regular virtual check-ups</li>
+                            <li>Emergency response system</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chat Toggle Button -->
+    <button class="chat-toggle" id="chatToggle">
+        <i class="fas fa-comments"></i>
+    </button>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget" id="chatWidget">
+        <!-- Header -->
+        <div class="chat-header">
+            <div class="chat-title">
+                <i class="fas fa-user-md"></i>
+                <h3>Medical Assistant</h3>
+            </div>
+            <div class="chat-actions">
+                <button class="new-chat-btn" aria-label="New Chat">
+                    <i class="fas fa-plus"></i>
+                </button>
+                <button class="minimize-btn" aria-label="Close Chat">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Messages Area -->
+        <div class="chat-body" id="chatMessages">
+            <div class="message bot-message">
+                <div class="message-content">
+                    <p>👋 Hello! How can I assist you today?</p>
+                    <span class="time">Now</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fixed Bottom Section -->
+        <div class="chat-bottom">
+            <div class="chat-suggestions">
+                <button data-query="appointment">📅 Book Appointment</button>
+                <button data-query="emergency">🚨 Emergency</button>
+                <button data-query="doctors">👨‍⚕️ Find Doctors</button>
+                <button data-query="hours">⏰ Working Hours</button>
+            </div>
+            
+            <div class="chat-input">
+                <div class="input-actions">
+                    <button class="upload-btn" aria-label="Upload File">
+                        <i class="fas fa-paperclip"></i>
+                    </button>
+                    <button class="voice-btn" aria-label="Voice Input">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                </div>
+                <input type="text" id="userInput" placeholder="Type your message...">
+                <button class="send-btn" id="sendBtn" disabled>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+   
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MedCare Hospital</h3>
+                    <p>Providing quality healthcare services since 1990.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="doctors.html">Doctors</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="emergency.html">Emergency</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-phone"></i> +1 234 567 8900</p>
+                    <p><i class="fas fa-envelope"></i> info@medcare.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Healthcare Ave, Medical City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MedCare Hospital. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/chat.js"></script>
+</body>
+</html> 

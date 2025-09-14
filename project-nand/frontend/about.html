@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MedCare Hospital - Leading healthcare provider offering comprehensive medical services, experienced doctors, and state-of-the-art facilities.">
+    <meta name="keywords" content="hospital, healthcare, medical services, doctors, appointments, emergency care">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="MedCare Hospital - Your Health, Our Priority">
+    <meta property="og:description" content="Leading healthcare provider with comprehensive medical services and experienced doctors.">
+    <meta property="og:image" content="https://yoursite.com/images/og-image.jpg">
+    <meta property="og:url" content="https://yoursite.com">
+    
+    <link rel="canonical" href="https://yoursite.com">
+    <title>About Us - MedCare Hospital</title>
+    <link rel="icon" type="image/x-icon" href="images/MEDCARE_logo.png">
+    
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="js/main.js" as="script">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Hospital",
+        "name": "MedCare Hospital",
+        "description": "Leading healthcare provider with comprehensive medical services",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Healthcare Ave",
+            "addressLocality": "Medical City",
+            "postalCode": "12345",
+            "addressCountry": "US"
+        },
+        "telephone": "+1-234-567-8900"
+    }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar container">
+            <!-- Sidebar Toggle Button -->
+            <button class="sidebar-toggle" aria-label="Open Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="logo-container">
+                <img src="images/MEDCARE_logo.png" alt="MedCare Logo">
+            </div>
+            
+            <div class="nav-links">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link active">About Us</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="doctors.html" class="nav-link">Our Doctors</a></li>
+                    <li><a href="appointments.html" class="nav-link">Appointments</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="emergency.html" class="nav-link">Emergency</a></li>
+                </ul>
+            </div>
+
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <span class="hamburger"></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <img src="images/MEDCARE_logo.png" alt="MedCare Logo">
+            </div>
+            <button class="close-sidebar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html" class="sidebar-active"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="services.html"><i class="fas fa-stethoscope"></i> Services</a></li>
+                <li><a href="doctors.html"><i class="fas fa-user-md"></i> Our Doctors</a></li>
+                <li><a href="appointments.html"><i class="fas fa-calendar-check"></i>Appointments</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="emergency.html"><i class="fas fa-ambulance"></i> Emergency</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay"></div>
+    <section class="about-hero">
+        <div class="container">
+            <div class="about-hero-content">
+                <h1>About MedCare Hospital</h1>
+                <p>Providing Exceptional Healthcare Since 1990</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="mission-vision">
+        <div class="container">
+            <div class="mission-vision-grid">
+                <div class="mission-card">
+                    <i class="fas fa-bullseye"></i>
+                    <h2>Our Mission</h2>
+                    <p>To provide exceptional healthcare services with compassion and expertise, ensuring the well-being of our community through innovative medical solutions and patient-centered care.</p>
+                </div>
+                <div class="vision-card">
+                    <i class="fas fa-eye"></i>
+                    <h2>Our Vision</h2>
+                    <p>To be the leading healthcare institution, recognized globally for excellence in medical care, research, and education, while maintaining our commitment to compassionate patient care.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="history-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Journey</h2>
+                <p>Building Excellence in Healthcare Since 1990</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="year">1990</div>
+                    <div class="content">
+                        <h3>Foundation</h3>
+                        <p>Established MedCare Hospital with 50 beds and basic medical facilities.</p>
+                        <div class="milestone">
+                            <i class="fas fa-hospital"></i>
+                            <span>First facility opened</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="timeline-item">
+                    <div class="year">1995</div>
+                    <div class="content">
+                        <h3>Expansion Phase I</h3>
+                        <p>Added specialized departments including Cardiology and Neurology.</p>
+                        <div class="milestone">
+                            <i class="fas fa-heart"></i>
+                            <span>Cardiac Center launched</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="timeline-item">
+                    <div class="year">2000</div>
+                    <div class="content">
+                        <h3>Technology Integration</h3>
+                        <p>Introduced state-of-the-art medical equipment and digital health records.</p>
+                        <div class="milestone">
+                            <i class="fas fa-laptop-medical"></i>
+                            <span>Digital transformation</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="timeline-item">
+                    <div class="year">2010</div>
+                    <div class="content">
+                        <h3>Research Excellence</h3>
+                        <p>Established Research & Development center for medical innovations.</p>
+                        <div class="milestone">
+                            <i class="fas fa-microscope"></i>
+                            <span>Research center opened</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="timeline-item">
+                    <div class="year">2015</div>
+                    <div class="content">
+                        <h3>Global Recognition</h3>
+                        <p>Achieved international accreditation and expanded to 500 beds.</p>
+                        <div class="milestone">
+                            <i class="fas fa-award"></i>
+                            <span>International certification</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="timeline-item">
+                    <div class="year">2020</div>
+                    <div class="content">
+                        <h3>Digital Innovation</h3>
+                        <p>Launched telemedicine services and AI-powered diagnostics.</p>
+                        <div class="milestone">
+                            <i class="fas fa-robot"></i>
+                            <span>AI integration</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="statistics">
+        <div class="container">
+            
+            <div class="section-header">
+                <h2>Our Core Values</h2>
+                <p>The principles that guide our service</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Compassion</h3>
+                    <p>Treating every patient with care and empathy</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-award"></i>
+                    <h3>Excellence</h3>
+                    <p>Striving for the highest standards in healthcare</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Integrity</h3>
+                    <p>Maintaining ethical practices and transparency</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Teamwork</h3>
+                    <p>Collaborating for better patient outcomes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Leadership Section -->
+<section class="leadership-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Our Leadership</h2>
+            <p>Meet the experts behind our success</p>
+        </div>
+        <div class="leadership-grid">
+            <div class="leader-card">
+                <img src="images/john-smith.jpg" alt="Dr. John Smith">
+                <div class="leader-info">
+                    <h3>Dr. John Smith</h3>
+                    <span>Chief Executive Officer</span>
+                    <p>30+ years of healthcare management experience</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="leader-card">
+                <img src="images/founder-dr-sarah-johnson-1.jpg" alt="Dr. Sarah Johnson">
+                <div class="leader-info">
+                    <h3>Dr. Sarah Johnson</h3>
+                    <span>Chief Medical Officer</span>
+                    <p>Leading medical excellence and patient care</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="leader-card">
+                <img src="images/michael-chen.jpg" alt="Dr. Michael Chen">
+                <div class="leader-info">
+                    <h3>Dr. Michael Chen</h3>
+                    <span>Head of Research</span>
+                    <p>Pioneering medical research and innovation</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="leader-card">
+                <img src="images/emily-parker.jpg" alt="Dr. Emily Parker">
+                <div class="leader-info">
+                    <h3>Dr. Emily Parker</h3>
+                    <span>Director of Operations</span>
+                    <p>Ensuring seamless healthcare delivery</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> 
+
+    <!-- Chat Toggle Button -->
+    <button class="chat-toggle" id="chatToggle">
+        <i class="fas fa-comments"></i>
+    </button>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget" id="chatWidget">
+        <!-- Header -->
+        <div class="chat-header">
+            <div class="chat-title">
+                <i class="fas fa-user-md"></i>
+                <h3>Medical Assistant</h3>
+            </div>
+            <div class="chat-actions">
+                <button class="new-chat-btn" aria-label="New Chat">
+                    <i class="fas fa-plus"></i>
+                </button>
+                <button class="minimize-btn" aria-label="Close Chat">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Messages Area -->
+        <div class="chat-body" id="chatMessages">
+            <div class="message bot-message">
+                <div class="message-content">
+                    <p>👋 Hello! How can I assist you today?</p>
+                    <span class="time">Now</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fixed Bottom Section -->
+        <div class="chat-bottom">
+            <div class="chat-suggestions">
+                <button data-query="appointment">📅 Book Appointment</button>
+                <button data-query="emergency">🚨 Emergency</button>
+                <button data-query="doctors">👨‍⚕️ Find Doctors</button>
+                <button data-query="hours">⏰ Working Hours</button>
+            </div>
+            
+            <div class="chat-input">
+                <div class="input-actions">
+                    <button class="upload-btn" aria-label="Upload File">
+                        <i class="fas fa-paperclip"></i>
+                    </button>
+                    <button class="voice-btn" aria-label="Voice Input">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                </div>
+                <input type="text" id="userInput" placeholder="Type your message...">
+                <button class="send-btn" id="sendBtn" disabled>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MedCare Hospital</h3>
+                    <p>Providing quality healthcare services since 1990.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="doctors.html">Doctors</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="emergency.html">Emergency</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-phone"></i> +1 234 567 8900</p>
+                    <p><i class="fas fa-envelope"></i> info@medcare.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Healthcare Ave, Medical City</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MedCare Hospital. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/chat.js"></script>
+</body>
+</html>
